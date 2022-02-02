@@ -41,3 +41,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # https://github.com/heartcombo/devise/issues/753
 gem 'devise', github: 'ghiculescu/devise', branch: 'patch-2'
+gem 'devise-jwt'
+gem 'rack-cors'
