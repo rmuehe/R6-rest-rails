@@ -43,3 +43,16 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', github: 'ghiculescu/devise', branch: 'patch-2'
 gem 'devise-jwt'
 gem 'rack-cors'
+
+# needed for swagger
+gem 'rspec-rails'
+gem 'rexml'
+
+# swagger
+gem 'rswag'
+
+group :test do
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rails-controller-testing'
+end
