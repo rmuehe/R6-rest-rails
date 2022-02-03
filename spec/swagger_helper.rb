@@ -22,14 +22,25 @@ RSpec.configure do |config|
         version: 'v1'
       },
       paths: {},
+      components: {
+        securitySchemes: {
+          Bearer: {
+            description: "Bearer token",
+            type: :apiKey,
+            name: 'Authorization',
+            in: :header
+          }
+        }
+      },
       servers: [
         {
-          url: 'https://{defaultHost}',
-          variables: {
-            defaultHost: {
-              default: 'www.example.com'
-            }
-          }
+          # url: 'https://{defaultHost}',
+          url: "#{ENV['APPLICATION_URL']}"
+          # variables: {
+          #   defaultHost: {
+          #     default: 'www.example.com'
+          #   }
+          # }
         }
       ]
     }

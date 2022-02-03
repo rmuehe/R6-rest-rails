@@ -39,7 +39,7 @@ class Api::V1::FactsController < ApplicationController
       # your code goes here
       @member = Member.find(params[:member_id])
       if @member.facts.find(params[:id]).update(fact_params)
-        render json: @fact, status: 204
+        render json: @fact, status: 200
       else
         render json: { error: 
   "The fact entry could not be updated. #{@fact.errors.full_messages.to_sentence}"},

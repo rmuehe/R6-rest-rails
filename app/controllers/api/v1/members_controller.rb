@@ -35,7 +35,7 @@ class Api::V1::MembersController < ApplicationController
     def update
       # your code godes here
       if @member.update(member_params)
-        render json: @member, status: 204
+        render json: @member, status: 200
       else
         render json: { error:
           "Member not updated: #{@member.errors.full_messages.to_sentence}"},
